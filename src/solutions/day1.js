@@ -1,4 +1,4 @@
-let parseInput = input => {
+let parse_input = input => {
   let parsed = input.split("\n").map(x => parseInt(x));
   return parsed;
 };
@@ -15,23 +15,23 @@ let second_helper = (item, total) => {
 export default class Day1 {
   first = input => {
     const start = new Date();
-    let list = parseInput(input);
+    let list = parse_input(input);
     let total = 0;
     list.forEach(x => {
       total += Math.floor(x / 3) - 2;
     });
-    return { result: total, time: new Date()- start};
+    return { result: total, time: new Date() - start };
   };
 
   second = input => {
     const start = new Date();
-    let list = parseInput(input);
+    let list = parse_input(input);
     let total = 0;
 
     list.forEach(x => {
       let fuel = second_helper(x, 0);
       total += fuel;
     });
-    return { result: total, time:  new Date()- start};
+    return { result: total, time: new Date() - start };
   };
 }

@@ -65,7 +65,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .clicked {
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
 }
@@ -83,6 +83,10 @@ export default {
   align-items: center;
 }
 
+h2 {
+  box-shadow: rgba(255, 255, 255, 0.8);
+}
+
 .tile-header {
   position: relative;
   width: 100;
@@ -92,10 +96,10 @@ export default {
 
 button {
   width: 50%;
-  padding: auto;
+  padding: 1rem;
   background-color: transparent;
   color: white;
-  text-shadow: rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(255, 255, 255, 0.8);
   border: none;
   cursor: pointer;
 }

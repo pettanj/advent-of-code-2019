@@ -1,4 +1,4 @@
-let parseInput = (input, initialValues) => {
+let parse_input = (input, initialValues) => {
   let parsed = input.split(",").map(x => parseInt(x));
   if (initialValues) {
     Object.entries(initialValues).forEach(x => {
@@ -8,7 +8,7 @@ let parseInput = (input, initialValues) => {
   return parsed;
 };
 
-let executeProgram = program => {
+let execute_program = program => {
   // ip = instruction pointer
   let ip = 0;
   while (ip < program.length) {
@@ -32,9 +32,9 @@ let executeProgram = program => {
 export default class Day2 {
   first = input => {
     const start = new Date();
-    let program = parseInput(input, { 1: 12, 2: 2 });
+    let program = parse_input(input, { 1: 12, 2: 2 });
 
-    program = executeProgram(program);
+    program = execute_program(program);
     return {
       result: program[0],
       time: new Date() - start
@@ -48,8 +48,8 @@ export default class Day2 {
     let finished = false;
     for (let n = 0; n <= 99; n++) {
       for (let v = 0; v <= 99; v++) {
-        let program = parseInput(input, { 1: n, 2: v });
-        if (executeProgram(program)[0] === 19690720) {
+        let program = parse_input(input, { 1: n, 2: v });
+        if (execute_program(program)[0] === 19690720) {
           noun = n;
           verb = v;
           finished = true;

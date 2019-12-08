@@ -13,10 +13,20 @@
 <script>
 // @ is an alias to /src
 import Tile from "@/components/Tile.vue";
+
+// Solutions
 import Day1 from "../solutions/day1";
 import Day2 from "../solutions/day2";
+import Day3 from "../solutions/day3";
+import Day4 from "../solutions/day4";
+import Day5 from "../solutions/day5";
+
+// Inputs
 import input1 from "../assets/inputs/1";
 import input2 from "../assets/inputs/2";
+import input3 from "../assets/inputs/3";
+let input4 = `137683-596253`;
+import input5 from "../assets/inputs/5";
 
 let shuffle = array => {
   var currentIndex = array.length,
@@ -48,10 +58,10 @@ export default {
       tiles: shuffle([
         { number: 1, solution: new Day1(), input: input1 },
         { number: 2, solution: new Day2(), input: input2 },
-        { number: 3 },
-        { number: 4 },
-        { number: 5 },
         { number: 6 },
+        { number: 3, solution: new Day3(), input: input3 },
+        { number: 4, solution: new Day4(), input: input4 },
+        { number: 5, solution: new Day5(), input: input5 },
         { number: 7 },
         { number: 8 },
         { number: 9 },
